@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Nhập doanh số bán hàng để tính hoa hồng</h1>
+<input id= tongDoanhso type="text">
+<button value="Tính" onclick="tinhHoahong()">Tính</button>
+<p id="ketQua"></p>
+<script>
+    function tinhHoahong() {
+        let a = +document.getElementById('tongDoanhso').value;
+        let hoaHong = a * 5 / 100;
+        let hoaHong1 = a * 10 / 100;
+        let hoaHong2 = a * 20 / 100;
+        if (a>300000000){
+            document.getElementById('ketQua').innerHTML="Hoa hồng = "+hoaHong2
+        } else if (a>100000000){
+            document.getElementById('ketQua').innerHTML="Hoa hồng = "+hoaHong1
+        } else if (a>0){
+            document.getElementById('ketQua').innerHTML="Hoa hồng = "+hoaHong
+        } else {
+            document.getElementById('ketQua').innerHTML="Không có hoa hồng"
+        }
+    }
+</script>
+</body>
+</html>

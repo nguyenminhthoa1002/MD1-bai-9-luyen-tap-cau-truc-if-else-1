@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính tiền điện thoại</h1>
+<input id=soPhut type="text" placeholder="Nhập số phút"/>
+<button value="Tính" onclick="tinhTien()">Tính tiền</button>
+<p id="ketQua"></p>
+<script>
+  function tinhTien() {
+    let a= document.getElementById('soPhut').value;
+    let b= a-50;
+    let c= a-200;
+    let soTien=25000+50*600+b*400;
+    console.log(soTien);
+    let soTien2=25000+50*600+150*400+c*200;
+      console.log(soTien2);
+    let soTien3=25000+a*600;
+      console.log(soTien3);
+    if (a>=50){
+      if (b<=150){
+        document.getElementById('ketQua').innerHTML="Số tiền phải trả là " + soTien
+      }else {
+        document.getElementById('ketQua').innerHTML="Số tiền phải trả là " +soTien2
+      }
+    } else{
+      document.getElementById('ketQua').innerHTML="Số tiền phải trả là " +soTien3
+    }
+  }
+</script>
+</body>
+</html>
